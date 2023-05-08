@@ -2,6 +2,8 @@ body{
     line-height: 1.5;
     margin: 0;
     font-family: arial;
+    scroll-behavior: smooth;
+    color: var(--main_font_grey_colr2);
 }
 
 :root{
@@ -15,18 +17,30 @@ body{
     --blue_color2: #2F486D;
     --blue_color3: #305690;
 
+    --main_grey_section_colr1: #F2F1F2;
+    --main_grey_section_colr2: #C7C7C6;
+    --main_grey_section_colr3: #fafafa;
+    --main_font_grey_colr1: #414141;
+    --main_font_grey_colr2: #4D4D4D;
+    --main_blue_grey_colr1: #2D333E;
+    --main_blue_grey_colr2: #11161C;
+    --main_orange_colr1: hsl(17, 70%, 68%);
+    --main_orange_colr2: #F4A259;
+    --main_orange_colr3: #FFA630;
+    --main_orange_colr4: hsl(17, 80%, 57%);
 
 }
 
 div.home_head{
-    background: url(Cover1.png) no-repeat center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)) ,url(analysis-2030261_1920.jpg) no-repeat center/cover;
     margin: 0;
     color: white;
-    padding-bottom: 30px;
+    padding-bottom: 30px 30px 0 30px;
+    /* position: relative; */
 }
 
 div.home_head img{
-    width: 200px;
+    width: 300px;
     display: block;
     border-radius: 50%;
     /* background-color: white; */
@@ -37,7 +51,7 @@ div.home_head img{
 h1{
     font-size: 50px;
     text-align: center;
-    margin: 10px 0;
+    margin: -10px 0 10px 0; 
 }
 
 div.short_line{
@@ -50,6 +64,7 @@ div.short_line{
 div.home_head p{
     text-align: center;
     color: #d4d1d1;
+    margin-bottom: 60px;
 }
 
 div.mobile_contact{
@@ -73,100 +88,96 @@ div.mobile_contact a:hover{
     font-size: 18px;
 }
 
-div.intro{
-    background: url(triangle2white.svg) no-repeat center bottom -1px/100%;
-    background-color: lightgray;
-    position: relative;
-    color: #393838;
-    padding: 30px 30px 100px 30px;
+div.home_head nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--main_blue_grey_colr1);
+    padding: 20px 0;
 }
 
-div.intro h2{
+nav li{
+    list-style-type: none;
+}
+
+nav li a{
+    text-decoration: none;
+    /* color: white; */
+    color: var(--main_orange_colr1);
+    font-size: 20px;
+    transition-duration: 0.5s;
+}
+
+nav li a:hover{
+    /* color: var(--main_orange_colr); */
+    color: white;
+    font-size: 23px;
+    border-bottom: solid 4px white;
+}
+
+div.intro{
+    background: url(triangle2white.svg) no-repeat center bottom -1px/100%;
+    /* background-color: lightgray; */
+    position: relative;
+    color: var(--main_font_grey_colr2);
+    padding: 30px 0px 50px 30px;
+}
+
+#space1{
     position: absolute;
-    background-color: lightgray;
-    top: -20px;
-    color: var(--color3);
-    padding: 5px 380px 0 20px;
+    background-color: white;
+    top: 10px;
+    left: 0;
+    color: var(--main_orange_colr);
+    padding: 5px 35% 0 20px;
     font-size: 30px;
 }
 
-div.intro p{
+div.p_container{
     margin: 0;
-    padding: 30px 30px 10px 30px;
-    border: var(--color3) solid 2px;
+    padding: 10px 30px 30px 30px;
+    border-right: lightgray solid 1px;
+    border-top: lightgrey solid 1px;
+}
+
+div.intro p{
     font-size: 20px;
+    max-width: 750px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 23px;
 }
 
 div.grey_space{
     position: absolute;
-    background-color: lightgray;
+    background-color: white;
     bottom: 190px;
     padding: 5px 200px;
     right: 0;
     height: 25px;
-    width: 200px;
+    width: 10%;
 }
 
-div.intro .bouton{
-    margin: 70px 0 20px 0;
-    text-align: center;
-}
+/* ______________________________________________________________________________________ */
 
-div.bouton a{
-    text-decoration: none;
-    color: var(--color3);
-    padding: 10px 30px;
-    border: solid 2px var(--color3);
-    font-weight: bold;
-    transition-duration: 0.5s;
-}
-
-div.bouton a:hover{
-    font-size: 14px;
-    box-shadow: -3px 3px 2px var(--shadow_color);
-    border-top: none;
-    border-right: none;
-}
 
 div.bloc2_more_info{
-    margin: 100px 0 0 0;
-    padding-bottom: 0px;
-}
-
-div.all_contacts{
-    margin: 0 30px 100px 30px ;
-    display: flex;
-    justify-content: space-evenly;
-    border-right: solid 4px var(--color4);
-    border-bottom: solid 4px var(--color4);
-}
-
-div.all_contacts p{
-    font-size: 23px;
-    color: #838282;
-    font-weight: bold;
+    background: url(triangle1white.svg) no-repeat center top/100%, url(triangle2white.svg) no-repeat center bottom/100%;
     margin: 0;
-}
-
-div.all_contacts img{
-    width: 50px;
-    border-radius: 50%;
-    transition-duration: 0.5s;
-}
-
-div.all_contacts img:hover{
-    width: 65px;
+    padding-bottom: 90px;
+    background-color: var(--main_grey_section_colr1);
+    padding-top: 90px;
 }
 
 div.txt{
     width: 40%;
-    background-color: lightgray;
-    text-align: center;
+    text-align: justify;
     display: inline-block;
     z-index: 3;
-    box-shadow: -15px -8px 3px var(--shadow_color);
-    margin: 50px 0 300px 150px;
+    margin: 0px 0 50px 100px;
     padding: 10px 10px 40px 10px;
+    font-size: 18px;
 }
 
 h2{
@@ -175,16 +186,21 @@ h2{
     color: var(--red_color);
 }
 
+div#h2_phone_container{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 h2#phone{
-    font-size: 0;
+    display: inline-block;
+    border-bottom: solid 3px var(--red_color);
 }
 
 div.img_container{
-    background-color: var(--color1);
-    width: 35%;
+    background-color: var(--main_orange_colr2);
+    width: 40%;
     display: inline-block;
     margin-bottom: 50px;
-
 }
 
 div.img_container img{
@@ -192,46 +208,73 @@ div.img_container img{
     display: block;
     position: relative;
     bottom: -50px;
-    right: -60px;
+    right: -30px;
     box-shadow: -15px -8px 3px var(--shadow_color);
     transition-duration: 1s;
+    /* max-height: 400px; */
 }
 
 div.img_container img:hover{
-    width: 150%;
+    width: 110%;
 }
 
 div.txt p{
-    padding: 20px 50px;
+    padding: 20px 0px;
     margin: 0;
+    /* max-width: 500px;
+    margin-left: auto;
+    margin-right: auto; */
 }
 
 a.bouton_linkedin{
     display: inline-block;
     text-decoration: none;
     text-align: center;
-    color: white;
-    border: solid 3px var(--red_color);
-    background-color: var(--red_color);
+    color: var(--main_orange_colr1);
+    border-bottom: solid 3px var(--main_orange_colr1);
     padding: 5px 15px;
     font-weight: bold;
     margin-top: 10px;
     transition-duration: 0.5s;
 }
 
-/* a.bouton_linkedin:hover{
-    background-color: #e1dfdf;
-    border: solid 3px var(--red_color);
-    color: var(--red_color);
-    font-size: 18px;
-} */
+
+/* ________________________________________________________________________________ */
+
+div.bouton{
+    margin: 70px 0 20px 0;
+    text-align: center;
+}
+
+div.bouton a{
+    text-decoration: none;
+    color: white;
+    background-color: hsl(43, 4%, 35%);
+    padding: 10px 30px;
+    /* border: solid 2px var(--main_orange_colr1); */
+    font-weight: bold;
+    transition-duration: 0.5s;
+}
+
+div.bouton a:hover{
+    font-size: 14px;
+    box-shadow: -3px 3px 2px var(--shadow_color);
+    border-bottom: solid 2px var(--main_orange_colr1);
+    border-left: solid 2px var(--main_orange_colr1);
+    background-color: white;
+    color: var(--main_orange_colr1);
+}
+
+
+/* ______________________________________________________________________________________ */
+
 
 div.bloc3{
     background: url(triangle1white.svg) no-repeat center top/100%;
     padding: 50px;
-    padding-top: 150px;
+    padding-top: 100px;
     margin-top: 0;
-    background-color: lightgray;
+    background-color: var(--main_grey_section_colr3);
     text-align: center;
 }
 
@@ -242,16 +285,17 @@ div.portfolios{
 }
 
 div.portf{
-    width: 40%;
-    /* box-shadow: 0 0 8px 8px var(--shadow_color); */
-    box-shadow: -15px 10px 4px var(--shadow_color);
+    width: 30%;
+    box-shadow: 0 2px 10px var(--shadow_color);
     background-color: white;
+    border-radius: 10px;
     transition-duration: 1s;
+    padding-bottom: 20px;
 }
 
 div.portf:hover{
-    width: 45%;
-    box-shadow: -20px 15px 5px var(--shadow_color);
+    width: 35%;
+    box-shadow: -8px 5px 5px var(--shadow_color);
 }
 
 div.bloc3 h2{
@@ -281,19 +325,53 @@ div.text h3{
 
 div.text a{
     text-decoration: none;
-    color: white;
-    padding: 10px 30px;
-    background-color: rgba(0, 0, 0, 0.669);
-    border-bottom: solid 3px var(--color3);
+    color: var(--main_orange_colr4);
+    padding: 7px 10px;
+    border-bottom: solid 3px var(--main_orange_colr4);
     transition-duration: 0.3s;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 div.text a:hover{
-    border-right: solid 3px var(--color4);
-    border-bottom: solid 3px var(--color4);
-    font-size: 15px;
-    box-shadow: 4px 3px 4px var(--shadow_color);
+    border-left: solid 3px var(--main_orange_colr4);
+    border-bottom: solid 3px var(--main_orange_colr4);
+    font-size: 14px;
+    box-shadow: -4px 3px 4px var(--shadow_color);
 }
+
+
+/* _______________________________________________________________________________ */
+
+div.all_contacts{
+    margin: 0 0 100px 0;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    background-color: var(--main_font_grey_colr1);
+}
+
+div.all_contacts p{
+    font-size: 23px;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 7px;
+}
+
+div.all_contacts img{
+    width: 50px;
+    border-radius: 10px;
+    transition-duration: 0.5s;
+}
+
+div.all_contacts img:hover{
+    width: 65px;
+}
+
+/* _______________________________________________________________________________ */
+
 
 iframe.foot_iframe{
     width: 100%;
@@ -301,22 +379,37 @@ iframe.foot_iframe{
 }
 
 
-
 /* _________________________________FOOT_FRAME____________________________________ */
+
+
 div.foot{
-    background: url(Cover2.png) no-repeat center/cover;
     color: white;
     margin: 40px;
-    /* box-shadow: -15px 10px 4px var(--shadow_color); */
-    box-shadow: 0 0 8px 8px var(--shadow_color);
+}
+
+div.foot_img_container{
+    background: url(laboratory-1338722_1920.jpg) no-repeat center/cover;
+    width: 65%;
+    position: relative;
+    left: 15%;
+    margin-right: 100px;
+}
+
+div.foot_img_container img{
+    width: 100%;
+    border-radius: 20px;
 }
 
 div.table_img_and_text{
-    background-color: rgba(57, 70, 108, 0.609);
+    background-color: rgba(8, 8, 8, 0.75);
+    color: white;
     text-align: left;
     padding: 30px;
     margin-top: 70px;
-    
+    position: relative;
+    top: 100px;
+    left: 100px;
+    border-right: solid 5px var(--main_orange_colr3);
 }
 
 div.table_img_and_text img{
@@ -332,8 +425,8 @@ div.table_img_and_text h3{
 }
 
 div.table_img_and_text p{
-    font-size: 19px;
-    margin-right: 20px;
+    font-size: 18px;
+    margin: 0;
 }
 
 div.table_img_and_text a{
@@ -349,7 +442,7 @@ span.contact:hover{
 
 /* ____________________________________PORTFOLIO_________________________________ */
 div.header{
-    background-color: #464f58;
+    background-color: var(--main_blue_grey_colr2);
     margin: 0;
     padding: 20px;
     color: white;
@@ -367,9 +460,9 @@ div.header h1{
 
 div.header a{
     text-decoration: none;
-    color: white;
+    color: var(--main_orange_colr1);
     padding: 8px 20px;
-    border: solid 4px white;
+    border: solid 4px var(--main_orange_colr1);
     position: absolute;
     right: 10px;
     top: 40px;
@@ -383,9 +476,6 @@ div.header a:hover{
     border-bottom: none;
     border-left: none;
     font-weight: bold;
-    /* color: #2F486D;
-    background-color: white;
-    font-weight: bold; */
 }
 
 div.portf_title_layout{
@@ -409,16 +499,15 @@ div.portf_title:hover{
 }
 
 div.portf_title h2{
-    /* margin-left: 50px; */
     margin-top: 0;
     margin-bottom: 15px;
     padding-top: 30px;
-    color: var(--color4);
+    color: var(--main_orange_colr4);
     font-size: 37px;
 }
 
 div.portf_title p{
-    color: white;
+    color: var(--main_grey_section_colr2);
     font-size: 23px;
 }
 
@@ -426,7 +515,12 @@ div.portf_title div.bouton{
     margin-top: 50px;
 }
 
+div.topic_portf{
+    padding-right: 30px;
+}
+
 div.topic_portf p{
+    text-align: justify;
     border: none;
 }
 
@@ -439,6 +533,10 @@ div.all_contacts_portf{
 /* ==========================RESPONSIVE DESIGN/ PHONE============================= */
 @media only screen and (max-width: 767px) {
     
+    div.home_head img{
+        width: 220px;
+    }
+
     h1{
         font-size:  30px;
     }
@@ -450,59 +548,37 @@ div.all_contacts_portf{
     div.mobile_contact a{
         padding: 8px 25px;
     }
-    
-    div.intro h2{
-        top: -20px;
-        color: var(--color3);
-        padding: 5px 38px 0 20px;
-        font-size: 30px;
+
+    nav li a{
+        font-size: 18px;
+    }
+
+    nav li a:hover{
+        font-size: 19px;
+    }
+
+    div.intro{
+        padding: 0;
+    }
+
+    div#space1{
+        display: none;
     }
 
     div.intro p{
         margin: 0;
-        padding: 30px 30px 10px 30px;
-        border: var(--color3) solid 2px;
+        padding: 20px 0 0 0;
         font-size: 18px;
     }
 
-    div.grey_space{
-        padding: 5px 40px;
-        width: 70px;
-    }
-
-    div.all_contacts{
-        margin: 0 10px 80px 10px ;
-    }
-
-    div.all_contacts p{
-        font-size: 16px;
-    }
-
-    div.all_contacts img{
-        width: 25px;
-    }
-    
-    div.all_contacts img:hover{
-        width: 35px;
-    }
+    /* ____________________________________________________________________________________ */
 
     div.txt{
         width: 90%;
         display: block;
         margin: 0;
-        padding-left: 15px;
-        background-color: white;
-        box-shadow: none;
-    }
-
-    div.txt hr{
-        width: 0;
-        height: 0;
-        margin: 0;
-    }
-
-    h2#pc{
-        font-size: 0;
+        padding-left: 17px;
+        font-size: 16px;
     }
 
     div#h2_phone_container{
@@ -546,18 +622,53 @@ div.all_contacts_portf{
     }
 
     div.portf{
-        width: 100%;
+        display: block;
+        width: 70%;
         margin-bottom: 60px;
+        margin-right: auto;
+        margin-left: auto;
     }
 
     div.portf:hover{
-        margin-left: -2%;
-        width: 105%;
+        width: 75%;
+    }
+
+    div.text{
+        padding: 5px 10px;
+        /* text-align: justify; */
+    }
+
+    div.text h3{
+        font-size: 17px;
+    }
+
+    div.text p{
+        font-size: 16px;
     }
     
     div.text a{
-        padding: 7px 15px;
+        padding: 5px 7px;
+        font-size: 14px;
     }
+
+
+    div.all_contacts{
+        margin: 0 0 80px 0 ;
+    }
+
+    div.all_contacts p{
+        font-size: 16px;
+        padding-top: 0;
+    }
+
+    div.all_contacts img{
+        width: 25px;
+    }
+    
+    div.all_contacts img:hover{
+        width: 35px;
+    }
+
 
     iframe.foot_iframe{
         height: 700px;
@@ -569,23 +680,32 @@ div.all_contacts_portf{
         margin: 20px;
     }
 
+    div.foot_img_container{
+        width: 75%;
+        position: relative;
+        left: 0;
+    }
+
     div.table_img_and_text{
-        padding: 15px;   
+        padding: 10px; 
+        left: 70px;  
+        top: 70px;
     }
     
     div.table_img_and_text img{
-        width: 90px;
+        width: 70px;
+        margin-left: -10px;
     }
 
     div.table_img_and_text h3{
-        font-size: 22px;
+        font-size: 20px;
         padding: 20px 0 0 0;
     }
 
     div.table_img_and_text p{
-        font-size: 16px;
+        font-size: 15px;
         margin-right: 0px;
-        margin-left: 10px;
+        margin-left: 0;
     }
 
 
@@ -598,14 +718,14 @@ div.all_contacts_portf{
 
     div.header a{
         padding: 5px 10px;
-        border: solid 2px white;
+        border: solid 2px var(--main_orange_colr1);
         top: 30px;
-        font-size: 10px;
+        font-size: 11px;
         font-weight: bold;
     }
     
     div.header a:hover{
-        font-size: 11px;
+        font-size: 12px;
     }
    
     div.portf_title{
@@ -635,7 +755,7 @@ div.all_contacts_portf{
     }
 
     div.all_contacts_portf{
-        margin-top: 50px;
+        margin: 50px 0 20px 0;
     }
 }   
 
@@ -663,5 +783,9 @@ div.all_contacts_portf{
     div.header a{
         top: 26px;
         right: 5px;
+    }
+
+    div.portf{
+        width: 80%;
     }
 }
