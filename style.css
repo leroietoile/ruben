@@ -36,6 +36,7 @@ div.home_head{
     margin: 0;
     color: white;
     padding-bottom: 30px 30px 0 30px;
+    padding-top: 70px;
     /* position: relative; */
 }
 
@@ -64,7 +65,7 @@ div.short_line{
 div.home_head p{
     text-align: center;
     color: #d4d1d1;
-    margin-bottom: 60px;
+    margin-bottom: 110px;
 }
 
 div.mobile_contact{
@@ -431,11 +432,11 @@ div.table_img_and_text p{
 
 div.table_img_and_text a{
     text-decoration: none;
-    color: #e1aa62;
+    color: var(--main_orange_colr1);
 }
 
 span.contact:hover{
-    border-bottom: solid 3px var(--color4);
+    border-bottom: solid 3px var(--main_orange_colr1);
 }
 
 
@@ -516,12 +517,13 @@ div.portf_title div.bouton{
 }
 
 div.topic_portf{
-    padding-right: 30px;
+    color: var(--main_font_grey_colr2);
+    padding: 30px 50px;
 }
 
 div.topic_portf p{
     text-align: justify;
-    border: none;
+    font-size: 18px;
 }
 
 div.all_contacts_portf{
@@ -748,9 +750,12 @@ div.all_contacts_portf{
         padding: 5px 15px;
     }
 
+    div.topic_portf{
+        padding: 30px 20px;
+    }
+
     div.topic_portf p{
-        border: none;
-        padding: 0;
+        margin-top: 0;
         font-size: 16px;
     }
 
