@@ -11,7 +11,10 @@ body{
     --color2: #3F2A24;
     --color3: #9e753f;
     --color4: #c89656;
-    --red_color: #bb330a;
+    --red_color: #B9342A;
+    --black_red_color: #6F0B15;
+    --grey_clr: #A19C9E;
+    --pink_clr: #CA6565;
     --blue_color1: #9DB7D6;
     --shadow_color: #0000004d;
     --blue_color2: #2F486D;
@@ -23,6 +26,7 @@ body{
     --main_font_grey_colr1: #414141;
     --main_font_grey_colr2: #4D4D4D;
     --main_blue_grey_colr1: #2D333E;
+    --grey_clr2: rgb(62, 61, 61);
     --main_blue_grey_colr2: #11161C;
     --main_orange_colr1: hsl(17, 70%, 68%);
     --main_orange_colr2: #F4A259;
@@ -31,28 +35,43 @@ body{
 
 }
 
-div.home_head{
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)) ,url(analysis-2030261_1920.jpg) no-repeat center/cover;
-    margin: 0;
+header{
+    background: url(header_cover.png) no-repeat center/cover;
     color: white;
-    padding-bottom: 30px 30px 0 30px;
-    padding-top: 70px;
-    /* position: relative; */
+    padding: 0;
+    margin-bottom: 0px;  
 }
 
-div.home_head img{
-    width: 300px;
-    display: block;
-    border-radius: 50%;
-    /* background-color: white; */
-    margin-left: auto;
-    margin-right: auto;
+header div.profil_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+header div.profil_container img{
+    width: 25%;
+    position: relative;
+    bottom: -150px;
+    margin-left: 0;
+}
+
+header div.profil_container p{
+    margin-top: 17px;
+    font-size: 28px;
+    color: lightgrey;
+    margin-left: 20px;
+    text-align: center;
 }
 
 h1{
-    font-size: 50px;
-    text-align: center;
-    margin: -10px 0 10px 0; 
+    font-size: 45px;
+    text-align: right;
+    position: relative;
+    background-color: #CA656540;
+    display: block;
+    bottom: 100px;
+    padding-right: 80px;
 }
 
 div.short_line{
@@ -62,11 +81,6 @@ div.short_line{
     margin: 0px auto 20px auto;
 }
 
-div.home_head p{
-    text-align: center;
-    color: #d4d1d1;
-    margin-bottom: 110px;
-}
 
 div.mobile_contact{
     margin: 50px 0 20px 0;
@@ -89,31 +103,61 @@ div.mobile_contact a:hover{
     font-size: 18px;
 }
 
-div.home_head nav{
+
+nav{
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    background-color: var(--main_blue_grey_colr1);
-    padding: 20px 0;
+    justify-content: space-between;
+    background: linear-gradient(to right, white, #c2c0c0) ;
+    padding: 15px 0;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 5px 4px 2px #00000050;
 }
 
 nav li{
     list-style-type: none;
 }
 
+#first_nav{
+    margin-left: 30px;
+}
+
+#nav_contact_me{
+    background-color: var(--black_red_color);
+    color: white;
+    border-radius: 30px;
+    padding: 8px 20px;
+    margin-right: 20px;
+}
+
 nav li a{
     text-decoration: none;
     /* color: white; */
-    color: var(--main_orange_colr1);
-    font-size: 20px;
+    color: var(--black_red_color);
+    font-size: 18px;
+    font-weight: bold;
     transition-duration: 0.5s;
 }
 
 nav li a:hover{
-    /* color: var(--main_orange_colr); */
-    color: white;
-    font-size: 23px;
-    border-bottom: solid 4px white;
+    color: var(--main_orange_colr4);
+    font-size: 19px;
+    border-bottom: solid 4px var(--main_orange_colr4);
+}
+
+
+div.social_network{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    left: 50%;
+    top: -20px;
+}
+
+div.social_network img{
+    width: 26px;
 }
 
 div.intro{
@@ -137,8 +181,8 @@ div.intro{
 div.p_container{
     margin: 0;
     padding: 10px 30px 30px 30px;
-    border-right: lightgray solid 1px;
-    border-top: lightgrey solid 1px;
+    border-right: var(--main_orange_colr4) solid 1px;
+    border-top: var(--main_orange_colr4) solid 1px;
 }
 
 div.intro p{
@@ -269,7 +313,6 @@ div.bouton a:hover{
 
 /* ______________________________________________________________________________________ */
 
-
 div.bloc3{
     background: url(triangle1white.svg) no-repeat center top/100%;
     padding: 50px;
@@ -283,6 +326,10 @@ div.portfolios{
     display: flex;
     justify-content: space-evenly;
     margin: 70px 0;
+}
+
+div#portfolios{
+    justify-content: flex-start;
 }
 
 div.portf{
@@ -314,14 +361,20 @@ div.portf img{
 
 div.text{
     padding: 20px;
-    margin: 0;
-    text-align: center;
+    margin: 0 auto;
+    text-align: left;
     color: #434242;
+    max-width: 220px;
 }
 
 div.text h3{
     color: #525151;
     font-size: 18px;
+    text-align: center;
+}
+
+div.link_container{
+    text-align: center;
 }
 
 div.text a{
@@ -376,71 +429,60 @@ div.all_contacts img:hover{
 
 iframe.foot_iframe{
     width: 100%;
-    height: 600px;
+    height: 800px;
 }
 
 
 /* _________________________________FOOT_FRAME____________________________________ */
 
 
-div.foot{
-    color: white;
-    margin: 40px;
-}
 
-div.foot_img_container{
-    background: url(laboratory-1338722_1920.jpg) no-repeat center/cover;
-    width: 65%;
-    position: relative;
-    left: 15%;
-    margin-right: 100px;
-}
-
-div.foot_img_container img{
-    width: 100%;
-    border-radius: 20px;
-}
-
-div.table_img_and_text{
-    background-color: rgba(8, 8, 8, 0.75);
-    color: white;
-    text-align: left;
-    padding: 30px;
-    margin-top: 70px;
-    position: relative;
-    top: 100px;
-    left: 100px;
-    border-right: solid 5px var(--main_orange_colr3);
-}
-
-div.table_img_and_text img{
-    width: 150px;
-    border-radius: 50%;
-}
-
-div.table_img_and_text h3{
-    text-align: center;
-    margin-top: 0;
-    font-size: 26px;
-    padding: 30px 0 0 0;
-}
-
-div.table_img_and_text p{
-    font-size: 18px;
-    margin: 0;
-}
-
-div.table_img_and_text a{
-    text-decoration: none;
-    color: var(--main_orange_colr1);
-}
 
 span.contact:hover{
     border-bottom: solid 3px var(--main_orange_colr1);
 }
 
 
+div.frame{
+    margin: 0;
+}
 
+div.frame_table{
+    margin-top: 200px;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px 50px;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2);
+}
+
+div.frame_table h3{
+    text-align: center;
+    color: #656565;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    /* text-transform: uppercase; */
+}
+
+div.frame_table img{
+    width: 90px;
+    border-radius: 50%;
+}
+
+div.frame_table p{
+    margin-left: 30px;
+    padding: 20px;
+    color: #2f2f2f;
+    font-size: 17px;
+    background: linear-gradient(white, #dcdbdb17);
+    border-bottom: #D89584 solid 4px;
+}
+
+div.frame_table a{
+    color: #ba3939;
+}
 /* ____________________________________PORTFOLIO_________________________________ */
 div.header{
     background-color: var(--main_blue_grey_colr2);
@@ -534,29 +576,65 @@ div.all_contacts_portf{
 
 /* ==========================RESPONSIVE DESIGN/ PHONE============================= */
 @media only screen and (max-width: 767px) {
-    
-    div.home_head img{
-        width: 220px;
+
+    header{
+        padding: 50px 0 0 0;
+    }
+
+    header div.profil_container img{
+        width: 35%;
+        bottom: -80px;
+        margin-left: 5px;
+    }
+
+    header div.profil_container p{
+        font-size: 18px;
+        color: lightgrey;
+        margin-top: 80px;
     }
 
     h1{
-        font-size:  30px;
+        font-size:  23px;
+        bottom: 100px;
+        padding-right: 14px;
+        bottom: 20px;
     }
 
     div.short_line{
-        width: 200px;
+        width: 150px;
     }
 
     div.mobile_contact a{
         padding: 8px 25px;
     }
 
+    nav{
+        padding: 10px 0;
+    }
+
+    #first_nav{
+        margin-left: 18px;
+    }
+
+    #nav_contact_me{
+        padding: 7px 15px;
+        margin-right: 18px;
+    }
+
     nav li a{
-        font-size: 18px;
+        font-size: 16px;
     }
 
     nav li a:hover{
-        font-size: 19px;
+        font-size: 17px;
+    }
+
+    div.social_network{
+        top: -10px;
+    }
+
+    div.social_network img{
+        width: 17px;
     }
 
     div.intro{
@@ -565,6 +643,11 @@ div.all_contacts_portf{
 
     div#space1{
         display: none;
+    }
+
+    div.p_container{
+        border-right: none;
+        border-top: none;
     }
 
     div.intro p{
@@ -678,38 +761,25 @@ div.all_contacts_portf{
 
 
     /* _________________________________FOOT_FRAME________________________________ */
-    div.foot{
-        margin: 20px;
-    }
-
-    div.foot_img_container{
-        width: 75%;
-        position: relative;
-        left: 0;
-    }
-
-    div.table_img_and_text{
-        padding: 10px; 
-        left: 70px;  
-        top: 70px;
-    }
     
-    div.table_img_and_text img{
-        width: 70px;
-        margin-left: -10px;
+    iframe.foot_iframe{
+        height: 850px;
     }
 
-    div.table_img_and_text h3{
+
+    div.frame_table{
+        width: 80%;
+        padding: 20px;
+    }
+
+    div.frame_table h3{
         font-size: 20px;
-        padding: 20px 0 0 0;
     }
 
-    div.table_img_and_text p{
+    div.frame_table p{
+        margin-left: 10px;
         font-size: 15px;
-        margin-right: 0px;
-        margin-left: 0;
     }
-
 
     /* _______________________________PORTFOLIO_______________________________ */
     div.header h1{

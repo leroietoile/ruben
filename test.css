@@ -1,0 +1,26 @@
+div.setting{
+    display: flex;
+    background-color: red;
+    justify-content: space-around;
+    width: 50%;
+    margin-left: -630px;
+    transition-duration: 0.6s;
+}
+
+div.setting img{
+    width: 50px;
+    display: block;
+}
+
+div.pfff{
+    /* display: none; */
+    background-color: blue;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+div.a:target{
+    display: block;
+}
+
